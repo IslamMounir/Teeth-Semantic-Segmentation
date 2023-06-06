@@ -71,9 +71,9 @@ def check_accuracy(loader, model, device="cuda"):
             )
 
     print(
-        f"Got {num_correct}/{num_pixels} with acc {num_correct/num_pixels*100:.2f}"
+        f"Accuracy: {num_correct/num_pixels*100:.2f} %"
     )
-    print(f"Dice score: {dice_score/len(loader)}")
+    print(f"Dice Score: {dice_score/len(loader)}")
     model.train()
 
 def save_predictions_as_imgs(
